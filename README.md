@@ -5,7 +5,7 @@ Vehicle Manager is for keeping track of repairs done to friends' vehicles!
 ## Description
 
 Vehicle Manager is a web application that I envisoned would help keep track of repairs done on personal 
-vehicles and other vehicles that people have prought to me to help repair. I wanted to create something that
+vehicles and other vehicles that people have brought to me to help repair. I wanted to create something that
 can be hosted locally and deployed easily. 
 
 Vehicle Manager still has a little ways to go but it's chugging along!
