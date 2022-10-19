@@ -21,11 +21,11 @@
 
 🐍 A Python application to keep track of vehicle's in your social circle.
 
-🤔 VehicleManager was created to demonstrate my programming abilities.
+💡 VehicleManager was created to demonstrate my programming abilities.
 
 📷 Below is a screenshot of VehicleManager's frontend with example data:
 
-<img src="./docs/img/vehiclemanager_frontend_screenshot.jpeg" width=75% height=75%>
+<img src="./docs/img/vehiclemanager_frontend_screenshot.jpeg" width=100% height=100%>
 
 ## Table of Contents
 - [Description](#description)
@@ -131,7 +131,7 @@ This is what I plan on implementing in the near future:
 
 3. You should see Uvicorn running:
 
-<img src="./docs/img/vehiclemanager_running.JPG" width=75% height=75%>
+<img src="./docs/img/vehiclemanager_running.JPG" width=100% height=100%>
 
 4. In your browser, navigate to:
     - http://127.0.0.1:8000/
@@ -145,7 +145,7 @@ This is what I plan on implementing in the near future:
     1. Click the icon in the top right corner
     2. Enter the data to create a new client!
 
-<img src="./docs/img/vehiclemanager_create_client.jpeg" width=75% height=75%>
+<img src="./docs/img/vehiclemanager_create_client.jpeg" width=100% height=100%>
 
 - Edit a client:
     - ⚠️ The current client data is automatically put in the fields
@@ -153,7 +153,7 @@ This is what I plan on implementing in the near future:
     1. Click the yellow button on the row of the client you want to edit
     2. Press submit when edits are done!
 
-<img src="./docs/img/vehiclemanager_edit_client.jpeg" width=75% height=75%>
+<img src="./docs/img/vehiclemanager_edit_client.jpeg" width=100% height=100%>
 
 - Delete a client:
     - ⚠️ WARNING: The client CANNOT have any vehicles attached to them first!!
@@ -167,14 +167,14 @@ This is what I plan on implementing in the near future:
     2. This will toggle the modal and now you can enter the values
     3. Press submit to create the vehicle!
 
-<img src="./docs/img/vehiclemanager_create_vehicle.jpeg" width=75% height=75%>
+<img src="./docs/img/vehiclemanager_create_vehicle.jpeg" width=100% height=100%>
 
 - Delete a vehicle:
     - ⚠️ WARNING: You must delete all of the vehicles attached to a client before removing that client!!
     1. Click on the red button on the row of the vehicle you want to remove
     2. Press confirm to delete the vehicle!
 
-<img src="./docs/img/vehiclemanager_delete_vehicle.jpeg" width=75% height=75%>
+<img src="./docs/img/vehiclemanager_delete_vehicle.jpeg" width=100% height=100%>
 
 ## License
 
