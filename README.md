@@ -19,9 +19,9 @@
 
 ## Description
 
-🐍 A Python application to keep track of vehicle's in your social circle.
+🌐 A Web App to keep track of vehicle's in your social circle.
 
-💡 VehicleManager was created to demonstrate my programming abilities.
+💻 VehicleManager was created to demonstrate my programming abilities.
 
 📷 Below is a screenshot of VehicleManager's frontend with example data:
 
@@ -44,7 +44,7 @@
 
 ### Goals
 
-📦 The goal of this project was to create a working web app with Python. I wanted to demonstrate my programming abilities.
+📦 The goal of this project was to create a working web app with Python. I want to demonstrate my programming abilities and how they evolve gradually.
 
 👨‍🎓 As my skills progress, I want to update this app to reflect those changes.
 
@@ -56,15 +56,21 @@ The following is a list of issues that I know of:
 - [ ] Deleting a client without deleting the vehicle leaves undeletable vehicle in the database 😐
 - [ ] There is no validation on the frontend 😔
 - [ ] Error handling is lacking 😑
+- [ ] The JavaScript code could be made more modular
+- [ ] The items in the vehicle table like to shift around with each reload
 
 ### Feature Wishlist
 
 This is what I plan on implementing in the near future:
+- [ ] Make the JavaScript code prettier
+- [ ] Add unit tests
 - [ ] Error Handling
 - [ ] Input Validation
 - [ ] Deployable Docker container 🐳
 - [ ] Login Page
 - [ ] HTTPS instead of HTTP
+- [ ] Add part lists and repair tickets to track repairs on the vehicles
+- [ ] Implement dependency security for the project
 
 ## Getting Started
 
@@ -178,7 +184,7 @@ This is what I plan on implementing in the near future:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](docs/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgements
 
