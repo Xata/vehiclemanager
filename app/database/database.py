@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 
 # Define global variables
 DATABASE_NAME = "vehiclemanager.sqlite"
-DATABASE_PATH = f"sqlite:///./{DATABASE_NAME}"
+DATABASE_PATH = f"sqlite:///./app/database/{DATABASE_NAME}"
 #SQLALCHEMY_DATABASE_PATH = "sqlite:///./data/vehicle_data.db"
 
 # Create a SQLAlchemy engine to interact with the database

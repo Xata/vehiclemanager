@@ -21,6 +21,7 @@ APP_HOST = "127.0.0.1"
 APP_PORT = 8000
 APP_TEMPLATES_DIRECTORY = "./app/templates"
 APP_STATIC_FILES_DIRECTORY = "./app/static"
+APP_DATABASE_PATH = database.DATABASE_PATH
 
 # Define FastAPI parameters
 app = FastAPI(
@@ -44,17 +45,15 @@ app.include_router(client_router.router)
 app.include_router(vehicle_router.router)
 
 @app.on_event("startup")
-def startup_create_database():
+def startup_check_database():
     # Create new database is it doesn't exist
-    if not os.path.exists(database.DATABASE_PATH):
-        print("No database file found. Creating a database at: " + database.DATABASE_PATH)
+    if not os.path.exists(APP_DATABASE_PATH):
         database.Base.metadata.create_all(bind=database.database_engine)
+
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
-
-
 
 # Run Vehicle Manager on uvicorn
 if __name__ == "__main__":

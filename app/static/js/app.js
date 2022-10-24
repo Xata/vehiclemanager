@@ -69,6 +69,30 @@ let $vehicleRows;
 function app() {
     // Refresh the tables in index.html
     refreshTable();
+
+    // New Client button functionality
+    /**
+    * Handle click event for creating a new client
+    */
+     $createNewClient.onclick = function () {
+        // Send POST request to backend
+        createClient({
+            client_name: document.getElementById("create-new-client-name-field").value,
+            client_email: document.getElementById("create-new-client-email-field").value,
+            client_phone: document.getElementById("create-new-client-phone-field").value
+        }).then(function () {
+            // Get any database updates
+            refreshTable();
+
+            // Reload the webpage
+            location.reload();
+
+            // Clear out the text in the fields
+            document.getElementById("create-new-client-name-field").value = "";
+            document.getElementById("create-new-client-email-field").value = "";
+            document.getElementById("create-new-client-phone-field").value = null;
+        });
+    }
 }
 
 /**
@@ -159,6 +183,13 @@ function vehicleHandler(data) {
 }
 
 /**
+ * Handles general home page functionality 
+ */
+void function homePageHandler() {
+
+}
+
+/**
  * Handles client data from backend to display in a table
  * 
  * @param {*} data Client data in JSON format
@@ -206,25 +237,6 @@ function clientHandler(data) {
         $deleteButtonGroup.setAttribute("class", "btn-group me-3");
         $deleteButtonGroup.setAttribute("role", "group");
         $deleteButtonGroup.setAttribute("aria-label", "Delete Button Group");
-
-        // New Client button functionality
-        /**
-         * Handle click event for creating a new client
-         */
-        $createNewClient.onclick = function () {
-            // Send POST request to backend 
-            createClient({
-                client_name: document.getElementById("create-new-client-name-field").value,
-                client_email: document.getElementById("create-new-client-email-field").value,
-                client_phone: document.getElementById("create-new-client-phone-field").value
-            }).then(function () {
-                // Get any database updates
-                refreshTable();
-
-                // Reload the webpage
-                location.reload();
-            });
-        }
 
         // Edit Icon functionality
         /** Div element containing the edit button */
