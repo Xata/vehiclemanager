@@ -21,10 +21,10 @@ const $tableBodyVehicles = document.getElementById("tbody-vehicles");
 const $createNewClient = document.getElementById("create-new-client-submit-btn");
 
 /** Button for editing an existing client */
-const $editExistingClient = document.getElementById("edit-client-btn");
+const $editClientSubmitButton = document.getElementById("edit-client-btn");
 
 /** Button for deleting an existing client */
-const $deleteExistingClient = document.getElementById("delete-client-btn");
+const $deleteClientButton = document.getElementById("delete-client-btn");
 
 /** Button for creating a new vehicle */
 const $createNewVehicle = document.getElementById("create-new-vehicle-submit-btn");
@@ -270,13 +270,14 @@ function clientHandler(data) {
             /**
              * Handle the click event for the button in the modal
              */
-            $editExistingClient.onclick = function () {
+            $editClientSubmitButton.onclick = function () {
                 // Send the PATCH request to the backend
                 updateClient(client.client_id, {
                     client_name: $editNameField.value,
                     client_email: $editEmailField.value,
                     client_phone: $editPhoneField.value
                 }).then(function () {
+                    //$editClientModal.toggle();
                     location.reload();
                 });
             }
@@ -295,10 +296,11 @@ function clientHandler(data) {
         $tdDelete.onclick = function () {
             // Turn on the modal to prompt deletion confirmation
             $deleteClientModal.toggle()
+            
             /**
              * Handle the click event for the confirm button
              */
-            $deleteExistingClient.onclick = function () {
+            $deleteClientButton.onclick = function () {
                 // Send DELETE request to the backend
                 deleteClient(client.client_id).then(location.reload());
             }
