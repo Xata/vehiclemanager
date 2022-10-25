@@ -95,10 +95,11 @@ This is what I plan on implementing in the near future:
     git clone https://github.com/Xata/vehiclemanager.git
     ```
 
-2. Setup the Python virtual environment:
-    ```
-    python -m venv venv
-    ```
+2. Setup the Python virtual environment in a new terminal window:
+    * ![Windows](https://img.shields.io/badge/Windows-0078D6?style=plastic&logo=windows&logoColor=white)
+        ```powershell
+        python -m venv venv
+        ```
 
 3. Activate the Python virtual environment:
     * ![Windows](https://img.shields.io/badge/Windows-0078D6?style=plastic&logo=windows&logoColor=white)
@@ -107,11 +108,11 @@ This is what I plan on implementing in the near future:
         ```
     * ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=plastic&logo=ubuntu&logoColor=white)
         ```bash
-        source venv/Scripts/activate
+        source venv/bin/activate
         ```
     * ![macOS](https://img.shields.io/badge/macOS-%23000000.svg?style=plastic&logo=apple&logoColor=white)
         ```zsh
-        source venv/Scripts/activate
+        source venv/bin/activate
         ```
 
 4. Install the required libraries with pip:
@@ -129,11 +130,11 @@ This is what I plan on implementing in the near future:
     - Verify that the required libraries are installed
 
 2. Run main.py:
+    - Run it through Visual Studio Code
     - In your terminal:
         ```python 
         python main.py
         ```
-    - Run it through Visual Studio Code
 
 3. You should see Uvicorn running:
 

@@ -29,10 +29,14 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item">
+                        <div class="dropdown-item p-2 text-white font-monospace">Add client: </div>
+                    </li>
                     <li class="nav-item">
                         <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Create new client">
-                            <a id="create-new-client" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#create-new-client-modal" href="#create-new-client-modal"><i class="bi bi-person-plus"></i></a>
+                            <a id="create-new-client" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#create-new-client-modal" href="#create-new-client-modal">
+                                <i class="bi bi-person-plus"></i>
+                            </a>
                         </button>
                     </li>
                 </ul>
