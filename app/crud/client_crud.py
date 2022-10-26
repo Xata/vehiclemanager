@@ -83,7 +83,7 @@ def delete_client(database: Session, client_id: str):
         database.commit()
 
         # Debug Print Commands
-        print("Successfully deleted from the database")
+        # print("Successfully deleted from the database")
 
     # Return the deleted client
     return database_deletable_client

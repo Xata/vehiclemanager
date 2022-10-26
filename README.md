@@ -53,21 +53,18 @@
 ### Known Issues
 
 The following is a list of issues that I know of:
-- [ ] Deleting a client without deleting the vehicle leaves undeletable vehicle in the database 😐
-- [ ] There is no validation on the frontend 😔
-- [ ] Error handling is lacking 😑
-- [ ] The JavaScript code could be made more modular
-- [ ] The items in the vehicle table like to shift around with each reload
+- [ ] Deleting a client without deleting the vehicle leaves undeletable vehicle in the database 
+- [ ] Error handling needs to be implemented
+- [ ] Need to leverage templates so the client doesn't execute so much JavaScript code
 
 ### Feature Wishlist
 
 This is what I plan on implementing in the near future:
-- [ ] Make the JavaScript code prettier
 - [ ] Add unit tests
 - [ ] Error Handling
 - [ ] Input Validation
 - [ ] Deployable Docker container 🐳
-- [ ] Login Page
+- [ ] Login Page and user authentication
 - [ ] HTTPS instead of HTTP
 - [ ] Add part lists and repair tickets to track repairs on the vehicles
 - [ ] Implement dependency security for the project

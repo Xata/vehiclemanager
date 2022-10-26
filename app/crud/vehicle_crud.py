@@ -55,7 +55,7 @@ def delete_vehicle(database: Session, vehicle_id: str):
         database.commit()
 
         # Debug Print Commands
-        print(f"Successfully deleted {vehicle_id} from the database")
+        # print(f"Successfully deleted {vehicle_id} from the database")
 
     # Return the deleted vehicle
     return database_deletable_vehicle
