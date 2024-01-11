@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="navbar-brand" href="#">&#x1f697 VehicleManager</a>
+          {% if user.is_authenticated %}
+          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Manage
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/add_vehicle">Add New Vehicle</a></li>
+            </ul>
+          </li>
+
+          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+          {% else %}
+          <a class="nav-item nav-link" id="login" href="/login">Login</a>
+          <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="container">{% block content %} {% endblock %}</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+{% block scripts %}
+    <!-- Include index.js from the static folder -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}
+
+  </body>
+</html>

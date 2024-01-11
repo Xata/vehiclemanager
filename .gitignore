@@ -1,6 +1,7 @@
 # VehicleManager files and directories to be ignored
 *.sqlite
 *.db
+instance/*
 
 # Below is the generated .gitignore params
 # Created by https://www.toptal.com/developers/gitignore/api/python,windows,macos,linux
@@ -210,11 +211,7 @@ dmypy.json
 cython_debug/
 
 # PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
 
 ### Windows ###
 # Windows thumbnail cache files
