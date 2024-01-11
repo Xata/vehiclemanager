@@ -12,9 +12,8 @@
     <img src="https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54" />
     <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white" />
     <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E" />
-    <img src="https://img.shields.io/badge/FastAPI-005571?style=plastic&logo=fastapi" />
+    <img src="https://img.shields.io/badge/Flask-000000?style=plastic&logo=flask" />
     <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=plastic&logo=sqlite&logoColor=white" />
-    <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=plastic&logo=bootstrap&logoColor=white" />    
 </p>
 
 ## Description
@@ -27,25 +26,52 @@
 - [Description](#description)
 - [Table of Contents](#table-of-contents)
 - [Project Overview](#project-overview)
-- [Getting Started](#getting-started)
-    - [Project Setup](#project-setup)
-    - [App Usage](#app-usage)
+    - [Goals](#goals)
+    - [Feature Wishlist](#feature-wishlist)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Project Overview
 
-## Getting Started
+### Goals
 
-This section coming soon!
+📦 The goal of this project was to create a working web app with Python.
 
-### Project Setup
+👨‍🎓 As my skills progress, I want to update this app to reflect those changes.
 
-This section coming soon!
+💪 I'm proud of what I have created so far and want to build off of this.
 
-### App Usage
+### Feature Wishlist
 
-This section coming soon!
+This is what I plan on implementing in the near future:
+- [ ] Add unit tests
+- [ ] HTTPS instead of HTTP
+- [ ] Add part lists and repair tickets to track repairs on the vehicles
+- [ ] Add environment variables
+- [ ] Make app production ready
+
+## Usage
+
+⚠️ Do not deploy in production environment.
+
+### Running 
+
+1. Build the Docker image:
+
+    Open a terminal, navigate to the root of the project, and run the following command to build the Docker image:
+    ```bash
+   docker build -t vehiclemanager .
+   ```
+   
+2. Run the Docker container:
+
+    Once the image is built, you can run a container based on that image:
+    ```bash
+   docker run -p 5000:5000 vehiclemanager
+   ```
+3. Access the app:
+
+    Navigate to http://127.0.0.1:5000 in your favorite web browser to view the app.
 
 ## License
 
@@ -54,8 +80,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgements
 
 Inspiration, code snippets, etc.
-* [FastAPI Documentation](https://fastapi.tiangolo.com/)
-* [Pydantic Documentation](https://pydantic-docs.helpmanual.io/)
+* [Flask Documentation](https://flask.palletsprojects.com/)
 * [SQLAlchemy Documentation](https://docs.sqlalchemy.org/en/14/orm/quickstart.html)
 * [Mozilla MDN Web Docs on FetchAPI](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [JSDoc on how to document JavaScript Code](https://jsdoc.app/)
