@@ -91,7 +91,7 @@ This is what I plan on implementing in the near future:
 2. Setup the Python virtual environment in a new terminal window:
     * ![Windows](https://img.shields.io/badge/Windows-0078D6?style=plastic&logo=windows&logoColor=white)
         ```powershell
-        python -m venv venv
+        python -m venv .venv
         ```
 
 3. Activate the Python virtual environment:
