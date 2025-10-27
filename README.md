@@ -79,11 +79,7 @@ This is what I plan on implementing in the near future:
 
 📌 Make sure you have a modern browser, Python, and Visual Studio Code installed.
 
-* Originally was developed with Python version 3.10.7.
-
-* The following browsers were tested:
-    - ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=plastic&logo=Firefox-Browser&logoColor=white)
-    - ![Edge](https://img.shields.io/badge/Edge-0078D7?style=plastic&logo=Microsoft-edge&logoColor=white)
+* Originally was developed with ```Python 3.10.7```. Now works with ```Python 3.13.2```
 
 📌 Before running VehicleManager, we need to follow these steps:
 
@@ -111,11 +107,6 @@ This is what I plan on implementing in the near future:
         ```zsh
         source venv/bin/activate
         ```
-
-4. Install the required libraries with pip:
-    ```
-    pip install -r requirements.txt
-    ```
 
 ### App Usage
 
