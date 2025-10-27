@@ -63,7 +63,7 @@ This is what I plan on implementing in the near future:
 - [ ] Add unit tests
 - [ ] Error Handling
 - [ ] Input Validation
-- [ ] Deployable Docker container 🐳
+- [x] Deployable Docker container 🐳
 - [ ] Login Page and user authentication
 - [ ] HTTPS instead of HTTP
 - [ ] Add part lists and repair tickets to track repairs on the vehicles
@@ -121,23 +121,14 @@ This is what I plan on implementing in the near future:
 
 📌 To run VehicleManager follow these steps:
 
-1. In Visual Studio Code:
-    - Ensure that main.py is the current file
-    - Ensure that the Python virtual environment is activated
-    - Verify that the required libraries are installed
+1. Run the following commands:
 
-2. Run main.py:
-    - Run it through Visual Studio Code
-    - In your terminal:
-        ```python 
-        python main.py
-        ```
+    ```zsh
+    docker build -t vehiclemanager .
+    docker run -p 8000:8000 -v $(pwd)/data:/app/data vehiclemanager
+    ```
 
-3. You should see Uvicorn running:
-
-<img src="./docs/img/vehiclemanager_running.JPG" width=100% height=100%>
-
-4. In your browser, navigate to:
+2. In your browser, navigate to:
     - http://127.0.0.1:8000/
     - ⚠️ If this is your first time running the app, there won't be any data to display.
 

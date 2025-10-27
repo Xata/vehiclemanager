@@ -37,4 +37,4 @@ class Vehicle(VehicleBase):
     vehicle_owner_id: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True

@@ -22,9 +22,9 @@ APP_DESCRIPTION = "Vehicle Manager helps you track what repairs you've done to y
 APP_VERSION = "0.0.1"
 APP_HOST = "127.0.0.1"
 APP_PORT = 8000
-APP_TEMPLATES_DIRECTORY = "./app/templates"
-APP_STATIC_FILES_DIRECTORY = "./app/static"
-APP_DATABASE_PATH = database.DATABASE_PATH
+APP_TEMPLATES_DIRECTORY = os.getenv("TEMPLATES_DIR", "./app/templates")
+APP_STATIC_FILES_DIRECTORY = os.getenv("STATIC_DIR", "./app/static")
+APP_DATABASE_PATH = database.DATABASE_FILE_PATH
 
 # Define FastAPI parameters
 app = FastAPI(

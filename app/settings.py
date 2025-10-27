@@ -2,7 +2,7 @@
 """
 
 # Import Python Dependencies
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 from database import database
 
@@ -18,4 +18,4 @@ class Settings(BaseSettings):
     app_port: int = 8000
     app_templates_directory: str = "./app/templates"
     app_static_files_directory: str = "./app/static"
-    app_database_path = database.DATABASE_PATH
+    app_database_path: str = database.DATABASE_PATH

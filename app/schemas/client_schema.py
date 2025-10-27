@@ -40,4 +40,4 @@ class Client(ClientBase):
 
     # Configure class to be used with an orm
     class Config:
-        orm_mode = True
+        from_attributes = True
